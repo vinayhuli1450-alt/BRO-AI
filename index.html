@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050914">
+  <title>BRO AI — Your Personal Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">✦</div><div><div class="brand-name">BRO<span>✦</span></div><small>Your Personal AI Assistant</small></div></div>
+      <nav class="nav">
+        <button class="nav-item active" data-mode="Chat">▣ <span>Chat</span></button>
+        <button class="nav-item" data-mode="Voice Assistant">♬ <span>Voice Assistant</span></button>
+        <button class="nav-item" data-mode="Study Help">▤ <span>Study Help</span></button>
+        <button class="nav-item" data-mode="Coding Help">&lt;/&gt; <span>Coding Help</span></button>
+        <button class="nav-item" data-mode="File & PDF">▧ <span>File & PDF</span></button>
+        <button class="nav-item" data-mode="Memory">◎ <span>Memory</span></button>
+        <button class="nav-item" data-mode="Settings">⚙ <span>Settings</span></button>
+      </nav>
+      <div class="side-quote"><p>Better Questions<br>Big Dreams</p><small>— BRO ♥</small></div>
+      <div class="side-status"><span class="online-dot"></span> Online <span class="wifi">⌁</span></div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand">✦ BRO</div>
+        <div class="searchbox"><span>⌕</span><input id="searchPrompt" placeholder="Ask me anything..."></div>
+        <button class="icon-button" id="headerMic" aria-label="Voice input">🎙</button>
+        <button class="icon-button" id="themeButton" aria-label="Toggle glow">☼</button>
+        <div class="user-chip"><span>V</span> Vinay⌄</div>
+      </header>
+
+      <section class="welcome">
+        <div class="avatar-wrap"><div class="orbit"></div><div class="avatar">B<span>✦</span></div></div>
+        <div class="welcome-copy"><p class="script">Hey, Vinay! <span>♥</span></p><h1>I'm <b>BRO</b></h1><p>Your Personal AI Assistant</p><small>Always here to help you.</small></div>
+      </section>
+
+      <div class="quick-nav">
+        <button data-prompt="Let's chat.">💬<span>Chat</span></button>
+        <button id="voiceShortcut">🎙<span>Voice</span></button>
+        <button data-prompt="Help me study a difficult engineering concept step by step.">▤<span>Study</span></button>
+        <button data-prompt="Help me understand and debug this code.">⌘<span>Code</span></button>
+        <button data-prompt="What useful things can you help me with?">✣<span>More</span></button>
+      </div>
+
+      <section id="chatLog" class="chat-log" aria-live="polite">
+        <div class="message assistant"><div class="mini-avatar">✦</div><div class="bubble"><strong>Hey Vinay! 👋</strong><p>I'm BRO, your personal AI assistant.</p><p>I can help you with:</p><ul><li>Answering your questions</li><li>Coding and debugging</li><li>Study support and explanations</li><li>Voice conversations</li></ul><p>Type a message or tap the microphone to begin. 💙</p><small>Ready when you are</small></div></div>
+      </section>
+
+      <div class="suggestions">
+        <button data-prompt="Explain a difficult concept in simple words.">▤ Explain this concept</button>
+        <button data-prompt="Help me make a study plan for this week.">☼ Give me a study plan</button>
+        <button data-prompt="Help me write and debug a Python program.">&lt;/&gt; Help with my code</button>
+        <button data-prompt="Tell me one surprising science fact.">♧ Tell me a fun fact</button>
+      </div>
+
+      <form id="chatForm" class="composer">
+        <button type="button" class="attach" title="Attachment feature can be added next">＋</button>
+        <input id="messageInput" autocomplete="off" placeholder="Type your message..." aria-label="Type your message">
+        <button class="send-button" type="submit" aria-label="Send message">➤</button>
+      </form>
+      <div class="voice-area">
+        <button id="voiceInput" class="pill">🎙 Voice Input</button>
+        <div class="voice-orb" id="voiceOrb"><span>🎙</span></div>
+        <button id="voiceToggle" class="pill">🔊 Female Voice: On</button>
+      </div>
+      <p class="footnote" id="statusText">BRO is your assistant. Check important information before acting on it.</p>
+    </main>
+
+    <aside class="right-panel">
+      <div class="quote-card"><p>“Small steps every day lead to big results.”</p><small>— BRO</small></div>
+      <section class="tools-card"><h3>⚡ Quick Tools</h3>
+        <button data-prompt="Help me write, explain, or debug code."><i>⌘</i><span><b>Coding Help</b><small>Write and debug code</small></span>›</button>
+        <button data-prompt="How should I summarize a PDF document?"><i>▤</i><span><b>PDF Reader</b><small>Plan a document summary</small></span>›</button>
+        <button data-prompt="Help me solve a calculation step by step."><i>▦</i><span><b>Calculator</b><small>Step-by-step calculations</small></span>›</button>
+        <button data-prompt="Tell me how to check the current weather for my city."><i>☀</i><span><b>Weather</b><small>Weather help</small></span>›</button>
+        <button data-prompt="Help me organize my notes."><i>✎</i><span><b>Notes</b><small>Organize your thoughts</small></span>›</button>
+      </section>
+      <div class="stats-card"><h3>▥ Your Workspace</h3><div><span>Chat messages</span><b id="messageCount">1</b></div><div><span>Voice status</span><b id="voiceStatus">Ready</b></div><div><span>AI connection</span><b id="connectionStatus">Setup needed</b></div></div>
+      <div class="thanks-card"><span>♡</span><p>Thanks for being here, Vinay!</p><small>Let's build something great. 💗</small></div>
+    </aside>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
